@@ -47,6 +47,7 @@ var excludedExtensions = map[string]bool{
 	".zip": true,
 	".7z":  true,
 	".log": true,
+	".go":  true,
 }
 
 var (
