@@ -8,7 +8,8 @@ Main function:
 3. Auto upgrade to new version.
 4. One running file, need not any support environment.
 5. Just put your json file into the same directory. GoEasyJson will watch files and auto create dynamic Json API and handlers.
-6. Free.
+6. You can use parameter goeasyjson -port 8888 to customize your prefer port.
+7. Free
 
 Auto upgrade:
 
