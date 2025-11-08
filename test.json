@@ -1,0 +1,10 @@
+[
+    {
+        "name": "scanDirectory",
+        "description": "扫描目录以查找JSON文件，并根据需要更新路由。"
+    },
+    {
+        "name": "main",
+        "description": "主函数，设置服务器和定期扫描。"
+    }
+]
