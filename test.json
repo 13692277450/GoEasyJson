@@ -18,5 +18,13 @@
             "type": "object",
             "properties": {}
         }
+    },
+    {
+        "name": "downloadUpgrade",
+        "description": "下载并安装新版本。",
+        "parameters": {
+            "type": "object",
+            "properties": {}
+        }
     }
 ]

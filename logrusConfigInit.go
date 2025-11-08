@@ -15,7 +15,6 @@ func LogrusConfigInit() {
 		Lg.Fatalf("Can not open log file %v !", err)
 
 	}
-
 	Lg.SetOutput(LogFile)
 	Lg.SetFormatter(&logrus.JSONFormatter{})
 	Lg.SetLevel(logrus.InfoLevel)

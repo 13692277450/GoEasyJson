@@ -10,7 +10,6 @@ require (
 	github.com/labstack/gommon v0.4.2
 	github.com/sirupsen/logrus v1.9.3
 )
-
 require (
 	github.com/VividCortex/ewma v1.2.0 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect

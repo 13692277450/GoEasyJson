@@ -222,7 +222,6 @@ func main() {
 	fmt.Println("")
 	if *IsUpgrade {
 		DownloadUpgrade() // download new version
-
 		os.Exit(0)
 	}
 	if _, err := os.Stat("goeasyjson.exe.old"); os.IsNotExist(err) {
