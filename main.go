@@ -211,7 +211,6 @@ func main() {
 	fmt.Println("Just put your new Json file in the same directory as this \nprogram, and it will be served automatically.")
 	fmt.Printf("Your json route will be localhost:%s/filename-without-extension.\n", port)
 	fmt.Println("---------------------------------------------------------------------------")
-
 	LogrusConfigInit()
 	go NewVersionCheck()
 	fmt.Println("GoEasyJson is checking new version and initiallizing, pls wait 3 seconds...")
@@ -219,7 +218,7 @@ func main() {
 	time.Sleep(time.Second * 3)
 	SignalString += SignalString + NewVersionIsAvailable // check for new version
 	fmt.Println(SignalString)
-	fmt.Println("")
+	fmt.Println(" ")
 	if *IsUpgrade {
 		DownloadUpgrade() // download new version
 		os.Exit(0)
