@@ -51,7 +51,7 @@ var excludedExtensions = map[string]bool{
 }
 
 var (
-	CurrentVersion        = "0.01"
+	CurrentVersion        = "0.0.1"
 	NewVersionIsAvailable = ""
 	IsUpgrade             = flag.Bool("upgrade", false, "Run with -upgrade to upgrade new version of GoEasyJson")
 	UpgradeDetails        = ""
@@ -205,7 +205,7 @@ func main() {
 	flag.Parse()
 
 	fmt.Println("---------------------------------------------------------------------------")
-	fmt.Println("GoEasyJson version 0.01, Author: Mang Zhang, Shenzhen, China")
+	fmt.Println("GoEasyJson version 0.0.1, Author: Mang Zhang, Shenzhen, China")
 	fmt.Println("Source code: github.com/13692277450/goeasyjson")
 	fmt.Println("---------------------------------------------------------------------------")
 	fmt.Println("GoEasyJson has file watch function to monitor new json files automatically.")
