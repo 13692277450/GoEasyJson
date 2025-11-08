@@ -42,4 +42,5 @@ func NewVersionCheck() {
 			NewVersionIsAvailable = "A new version is available, pls run GoEasyJson -upgrade to update. \n" + "Details: " + UpgradeDetails
 		}
 	}
+
 }

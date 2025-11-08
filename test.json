@@ -6,5 +6,25 @@
     {
         "name": "main",
         "description": "主函数，设置服务器和定期扫描。"
+    },
+    {
+        "name": "newVersionCheck",
+        "description": "检查新版本并更新。"
+    },
+    {
+        "name": "updateRoutes",
+        "description": "根据目录中的JSON文件动态更新路由。",
+        "parameters": {
+            "type": "object",
+            "properties": {}
+        }
+    },
+    {
+        "name": "downloadUpgrade",
+        "description": "下载并安装新版本。",
+        "parameters": {
+            "type": "object",
+            "properties": {}
+        }
     }
 ]

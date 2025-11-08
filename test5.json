@@ -16,5 +16,10 @@
         "author" : "Brian Kernighan and Dennis M. Ritchie",
 
         "published_date" : "1988-02-26"
+    },{
+        "bookname" : "The C++ Programming Language",
+        "author" : "Bjarne Stroustrup",
+
+        "published_date" : "1985-02-26"
     }
 ]
