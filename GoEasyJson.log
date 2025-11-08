@@ -1,202 +1,93 @@
-{"level":"info","msg":"Logrus started....","time":"2025-11-08T15:46:45+08:00"}
-{"level":"info","msg":"File watcher initialized, monitoring changes in current directory","time":"2025-11-08T15:46:45+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T15:46:45+08:00"}
-{"level":"info","msg":"Adding new route: /test4","time":"2025-11-08T15:46:45+08:00"}
-{"level":"info","msg":"Adding new route: /test5","time":"2025-11-08T15:46:45+08:00"}
-{"level":"info","msg":"Adding new route: /address","time":"2025-11-08T15:46:45+08:00"}
-{"level":"info","msg":"Adding new route: /logistics","time":"2025-11-08T15:46:45+08:00"}
-{"level":"info","msg":"Adding new route: /telephone","time":"2025-11-08T15:46:45+08:00"}
-{"level":"info","msg":"Adding new route: /test","time":"2025-11-08T15:46:45+08:00"}
-{"level":"info","msg":"Adding new route: /test2","time":"2025-11-08T15:46:45+08:00"}
-{"level":"info","msg":"Adding new route: /test3","time":"2025-11-08T15:46:45+08:00"}
-{"level":"info","msg":"Starting server on port 2006...","time":"2025-11-08T15:46:45+08:00"}
-{"level":"info","msg":"Access JSON files at http://localhost:2006/[filename-without-extension]","time":"2025-11-08T15:46:45+08:00"}
-{"level":"info","msg":"Server will automatically update routes when JSON files are added/removed/modified","time":"2025-11-08T15:46:45+08:00"}
-{"level":"info","msg":"Logrus started....","time":"2025-11-08T15:47:44+08:00"}
-{"level":"info","msg":"File watcher initialized, monitoring changes in current directory","time":"2025-11-08T15:47:44+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T15:47:44+08:00"}
-{"level":"info","msg":"Adding new route: /test5","time":"2025-11-08T15:47:44+08:00"}
-{"level":"info","msg":"Adding new route: /address","time":"2025-11-08T15:47:44+08:00"}
-{"level":"info","msg":"Adding new route: /logistics","time":"2025-11-08T15:47:44+08:00"}
-{"level":"info","msg":"Adding new route: /telephone","time":"2025-11-08T15:47:44+08:00"}
-{"level":"info","msg":"Adding new route: /test","time":"2025-11-08T15:47:44+08:00"}
-{"level":"info","msg":"Adding new route: /test2","time":"2025-11-08T15:47:44+08:00"}
-{"level":"info","msg":"Adding new route: /test3","time":"2025-11-08T15:47:44+08:00"}
-{"level":"info","msg":"Adding new route: /test4","time":"2025-11-08T15:47:44+08:00"}
-{"level":"info","msg":"Starting server on port 2006...","time":"2025-11-08T15:47:44+08:00"}
-{"level":"info","msg":"Access JSON files at http://localhost:2006/[filename-without-extension]","time":"2025-11-08T15:47:44+08:00"}
-{"level":"info","msg":"Server will automatically update routes when JSON files are added/removed/modified","time":"2025-11-08T15:47:44+08:00"}
-{"level":"info","msg":"Logrus started....","time":"2025-11-08T15:48:02+08:00"}
-{"level":"info","msg":"File watcher initialized, monitoring changes in current directory","time":"2025-11-08T15:48:02+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T15:48:02+08:00"}
-{"level":"info","msg":"Adding new route: /test3","time":"2025-11-08T15:48:02+08:00"}
-{"level":"info","msg":"Adding new route: /test4","time":"2025-11-08T15:48:02+08:00"}
-{"level":"info","msg":"Adding new route: /test5","time":"2025-11-08T15:48:02+08:00"}
-{"level":"info","msg":"Adding new route: /address","time":"2025-11-08T15:48:02+08:00"}
-{"level":"info","msg":"Adding new route: /logistics","time":"2025-11-08T15:48:02+08:00"}
-{"level":"info","msg":"Adding new route: /telephone","time":"2025-11-08T15:48:02+08:00"}
-{"level":"info","msg":"Adding new route: /test","time":"2025-11-08T15:48:02+08:00"}
-{"level":"info","msg":"Adding new route: /test2","time":"2025-11-08T15:48:02+08:00"}
-{"level":"info","msg":"Starting server on port 2006...","time":"2025-11-08T15:48:02+08:00"}
-{"level":"info","msg":"Access JSON files at http://localhost:2006/[filename-without-extension]","time":"2025-11-08T15:48:02+08:00"}
-{"level":"info","msg":"Server will automatically update routes when JSON files are added/removed/modified","time":"2025-11-08T15:48:02+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T15:49:02+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\logrusConfigInit.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:49:18+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\logrusConfigInit.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:49:18+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:49:43+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:49:43+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:49:59+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:49:59+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T15:50:02+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:50:02+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:50:02+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\logrusConfigInit.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:50:19+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\logrusConfigInit.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:50:20+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:50:30+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:50:30+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T15:51:02+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:51:15+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:51:15+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:51:24+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:51:24+08:00"}
-{"level":"info","msg":"Logrus started....","time":"2025-11-08T15:52:38+08:00"}
-{"level":"info","msg":"File watcher initialized, monitoring changes in current directory","time":"2025-11-08T15:52:38+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T15:52:38+08:00"}
-{"level":"info","msg":"Adding new route: /test3","time":"2025-11-08T15:52:38+08:00"}
-{"level":"info","msg":"Adding new route: /test4","time":"2025-11-08T15:52:38+08:00"}
-{"level":"info","msg":"Adding new route: /test5","time":"2025-11-08T15:52:38+08:00"}
-{"level":"info","msg":"Adding new route: /address","time":"2025-11-08T15:52:38+08:00"}
-{"level":"info","msg":"Adding new route: /logistics","time":"2025-11-08T15:52:38+08:00"}
-{"level":"info","msg":"Adding new route: /telephone","time":"2025-11-08T15:52:38+08:00"}
-{"level":"info","msg":"Adding new route: /test","time":"2025-11-08T15:52:38+08:00"}
-{"level":"info","msg":"Adding new route: /test2","time":"2025-11-08T15:52:38+08:00"}
-{"level":"info","msg":"Starting server on port 2006...","time":"2025-11-08T15:52:38+08:00"}
-{"level":"info","msg":"Access JSON files at http://localhost:2006/[filename-without-extension]","time":"2025-11-08T15:52:38+08:00"}
-{"level":"info","msg":"Server will automatically update routes when JSON files are added/removed/modified","time":"2025-11-08T15:52:38+08:00"}
-{"level":"info","msg":"The Json response route [\r\n    {\r\n        \"Title\": \"The Great Gatsby\",\r\n        \"Date\": \"March 27, 2013\",\r\n        \"Play Date\": \"March 27, 2013\"\r\n    },\r\n    {\r\n        \"Title\": \"The Great 123\",\r\n        \"Date\": \"12 27, 2013\",\r\n        \"Play Date\": \"34 27, 2013\"\r\n    },\r\n    {\r\n        \"Title\": \"The Great 1211113\",\r\n        \"Date\": \"12 27, 11111\",\r\n        \"Play Date\": \"34 27, 333\"\r\n    }\r\n] was created success.","time":"2025-11-08T15:53:10+08:00"}
-{"level":"info","msg":"The Json response route [\r\n    {\r\n        \"name\": \"scanDirectory\",\r\n        \"description\": \"扫描目录以查找JSON文件，并根据需要更新路由。\"\r\n    },\r\n    {\r\n        \"name\": \"main\",\r\n        \"description\": \"主函数，设置服务器和定期扫描。\"\r\n    }\r\n] was created success.","time":"2025-11-08T15:53:14+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T15:53:38+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:54:10+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:54:10+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T15:54:38+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:55:00+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:55:00+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:55:15+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:55:15+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:55:19+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:55:19+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T15:55:38+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:55:40+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:55:40+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:56:10+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:56:10+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T15:56:38+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:56:42+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:56:42+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:57:11+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:57:11+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T15:57:38+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:58:25+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go   %!(EXTRA fsnotify.Op=WRITE)","time":"2025-11-08T15:58:25+08:00"}
-{"level":"info","msg":"Logrus started....","time":"2025-11-08T15:58:32+08:00"}
-{"level":"info","msg":"File watcher initialized, monitoring changes in D:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T15:58:32+08:00"}
-{"level":"info","msg":"File watcher initialized, monitoring changes in current directory","time":"2025-11-08T15:58:32+08:00"}
-{"level":"info","msg":"Current directory: D:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T15:58:32+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T15:58:32+08:00"}
-{"level":"info","msg":"Adding new route: /test3","time":"2025-11-08T15:58:32+08:00"}
-{"level":"info","msg":"Adding new route: /test4","time":"2025-11-08T15:58:32+08:00"}
-{"level":"info","msg":"Adding new route: /test5","time":"2025-11-08T15:58:32+08:00"}
-{"level":"info","msg":"Adding new route: /address","time":"2025-11-08T15:58:32+08:00"}
-{"level":"info","msg":"Adding new route: /logistics","time":"2025-11-08T15:58:32+08:00"}
-{"level":"info","msg":"Adding new route: /telephone","time":"2025-11-08T15:58:32+08:00"}
-{"level":"info","msg":"Adding new route: /test","time":"2025-11-08T15:58:32+08:00"}
-{"level":"info","msg":"Adding new route: /test2","time":"2025-11-08T15:58:32+08:00"}
-{"level":"info","msg":"Starting server on port 2006...","time":"2025-11-08T15:58:32+08:00"}
-{"level":"info","msg":"Access JSON files at http://localhost:2006/[filename-without-extension]","time":"2025-11-08T15:58:32+08:00"}
-{"level":"info","msg":"Server will automatically update routes when JSON files are added/removed/modified","time":"2025-11-08T15:58:32+08:00"}
-{"level":"info","msg":"The Json response route test.json was created success.","time":"2025-11-08T15:58:42+08:00"}
-{"level":"info","msg":"The Json response route test4.json was created success.","time":"2025-11-08T15:58:45+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T15:59:08+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T15:59:08+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\GoEasyJson.log  WRITE","time":"2025-11-08T15:59:27+08:00"}
-{"level":"info","msg":"Current directory: D:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T15:59:32+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T15:59:32+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T15:59:56+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T15:59:56+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T16:00:06+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T16:00:06+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T16:00:25+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T16:00:25+08:00"}
-{"level":"info","msg":"Current directory: D:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:00:32+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T16:00:32+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T16:00:37+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T16:00:37+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T16:00:46+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T16:00:46+08:00"}
-{"level":"info","msg":"Current directory: D:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:01:32+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T16:01:32+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T16:01:37+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T16:01:37+08:00"}
-{"level":"info","msg":"Logrus started....","time":"2025-11-08T16:02:01+08:00"}
-{"level":"info","msg":"File watcher initialized, monitoring changes in D:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:02:04+08:00"}
-{"level":"info","msg":"File watcher initialized, monitoring changes in current directory","time":"2025-11-08T16:02:04+08:00"}
-{"level":"info","msg":"Current directory: D:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:02:04+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T16:02:04+08:00"}
-{"level":"info","msg":"Adding new route: /test","time":"2025-11-08T16:02:04+08:00"}
-{"level":"info","msg":"Adding new route: /test2","time":"2025-11-08T16:02:04+08:00"}
-{"level":"info","msg":"Adding new route: /test3","time":"2025-11-08T16:02:04+08:00"}
-{"level":"info","msg":"Adding new route: /test4","time":"2025-11-08T16:02:04+08:00"}
-{"level":"info","msg":"Adding new route: /test5","time":"2025-11-08T16:02:04+08:00"}
-{"level":"info","msg":"Adding new route: /address","time":"2025-11-08T16:02:04+08:00"}
-{"level":"info","msg":"Adding new route: /logistics","time":"2025-11-08T16:02:04+08:00"}
-{"level":"info","msg":"Adding new route: /telephone","time":"2025-11-08T16:02:04+08:00"}
-{"level":"info","msg":"Starting server on port 2006...","time":"2025-11-08T16:02:04+08:00"}
-{"level":"info","msg":"Access JSON files at http://localhost:2006/[filename-without-extension]","time":"2025-11-08T16:02:04+08:00"}
-{"level":"info","msg":"Server will automatically update routes when JSON files are added/removed/modified","time":"2025-11-08T16:02:04+08:00"}
-{"level":"info","msg":"Current directory: D:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:03:04+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T16:03:04+08:00"}
-{"level":"info","msg":"Logrus started....","time":"2025-11-08T16:03:14+08:00"}
-{"level":"info","msg":"File watcher initialized, monitoring changes in D:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:03:17+08:00"}
-{"level":"info","msg":"File watcher initialized, monitoring changes in current directory","time":"2025-11-08T16:03:17+08:00"}
-{"level":"info","msg":"Current directory: D:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:03:17+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T16:03:17+08:00"}
-{"level":"info","msg":"Adding new route: /test4","time":"2025-11-08T16:03:17+08:00"}
-{"level":"info","msg":"Adding new route: /test5","time":"2025-11-08T16:03:17+08:00"}
-{"level":"info","msg":"Adding new route: /address","time":"2025-11-08T16:03:17+08:00"}
-{"level":"info","msg":"Adding new route: /logistics","time":"2025-11-08T16:03:17+08:00"}
-{"level":"info","msg":"Adding new route: /telephone","time":"2025-11-08T16:03:17+08:00"}
-{"level":"info","msg":"Adding new route: /test","time":"2025-11-08T16:03:17+08:00"}
-{"level":"info","msg":"Adding new route: /test2","time":"2025-11-08T16:03:17+08:00"}
-{"level":"info","msg":"Adding new route: /test3","time":"2025-11-08T16:03:17+08:00"}
-{"level":"info","msg":"Starting server on port 2006...","time":"2025-11-08T16:03:17+08:00"}
-{"level":"info","msg":"Access JSON files at http://localhost:2006/[filename-without-extension]","time":"2025-11-08T16:03:17+08:00"}
-{"level":"info","msg":"Server will automatically update routes when JSON files are added/removed/modified","time":"2025-11-08T16:03:17+08:00"}
-{"level":"info","msg":"Logrus started....","time":"2025-11-08T16:05:02+08:00"}
-{"level":"info","msg":"Logrus started....","time":"2025-11-08T16:13:41+08:00"}
-{"level":"info","msg":"File watcher initialized, monitoring changes in D:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:13:44+08:00"}
-{"level":"info","msg":"File watcher initialized, monitoring changes in current directory","time":"2025-11-08T16:13:44+08:00"}
-{"level":"info","msg":"Current directory: D:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:13:44+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T16:13:44+08:00"}
-{"level":"info","msg":"Adding new route: /test4","time":"2025-11-08T16:13:44+08:00"}
-{"level":"info","msg":"Adding new route: /test5","time":"2025-11-08T16:13:44+08:00"}
-{"level":"info","msg":"Adding new route: /address","time":"2025-11-08T16:13:44+08:00"}
-{"level":"info","msg":"Adding new route: /logistics","time":"2025-11-08T16:13:44+08:00"}
-{"level":"info","msg":"Adding new route: /telephone","time":"2025-11-08T16:13:44+08:00"}
-{"level":"info","msg":"Adding new route: /test","time":"2025-11-08T16:13:44+08:00"}
-{"level":"info","msg":"Adding new route: /test2","time":"2025-11-08T16:13:44+08:00"}
-{"level":"info","msg":"Adding new route: /test3","time":"2025-11-08T16:13:44+08:00"}
-{"level":"info","msg":"Starting server on port 2006...","time":"2025-11-08T16:13:44+08:00"}
-{"level":"info","msg":"Access JSON files at http://localhost:2006/[filename-without-extension]","time":"2025-11-08T16:13:44+08:00"}
-{"level":"info","msg":"Server will automatically update routes when JSON files are added/removed/modified","time":"2025-11-08T16:13:44+08:00"}
-{"level":"info","msg":"The Json response route test4.json was response success.","time":"2025-11-08T16:14:32+08:00"}
-{"level":"info","msg":"Current directory: D:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:14:44+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T16:14:44+08:00"}
-{"level":"info","msg":"The Json response route test3.json was response success.","time":"2025-11-08T16:14:45+08:00"}
-{"level":"info","msg":"The Json response route test2.json was response success.","time":"2025-11-08T16:15:02+08:00"}
-{"level":"info","msg":"The Json response route test.json was response success.","time":"2025-11-08T16:15:05+08:00"}
-{"level":"info","msg":"Current directory: D:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:15:44+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T16:15:44+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\GoEasyJson.log  WRITE","time":"2025-11-08T16:16:03+08:00"}
-{"level":"info","msg":"Current directory: D:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:16:44+08:00"}
-{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T16:16:44+08:00"}
-{"level":"info","msg":"File event detected: D:\\Project\\GoOfficial\\GoEasyJson\\GoEasyJson.log  WRITE","time":"2025-11-08T16:16:49+08:00"}
+{"level":"info","msg":"File event detected: d:\\Project\\GoOfficial\\GoEasyJson\\GoEasyJson.log  WRITE","time":"2025-11-08T16:54:55+08:00"}
+{"level":"info","msg":"Current directory: d:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:54:56+08:00"}
+{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T16:54:56+08:00"}
+{"level":"info","msg":"File event detected: d:\\Project\\GoOfficial\\GoEasyJson\\GoEasyJson.log  WRITE","time":"2025-11-08T16:55:01+08:00"}
+{"level":"info","msg":"Logrus started....","time":"2025-11-08T16:55:36+08:00"}
+{"level":"info","msg":"File watcher initialized, monitoring changes in current directory","time":"2025-11-08T16:55:39+08:00"}
+{"level":"info","msg":"Current directory: d:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:55:39+08:00"}
+{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T16:55:39+08:00"}
+{"level":"info","msg":"Adding new route: /logistics","time":"2025-11-08T16:55:39+08:00"}
+{"level":"info","msg":"Adding new route: /telephone","time":"2025-11-08T16:55:39+08:00"}
+{"level":"info","msg":"Adding new route: /test","time":"2025-11-08T16:55:39+08:00"}
+{"level":"info","msg":"Adding new route: /test2","time":"2025-11-08T16:55:39+08:00"}
+{"level":"info","msg":"Adding new route: /test3","time":"2025-11-08T16:55:39+08:00"}
+{"level":"info","msg":"Adding new route: /test4","time":"2025-11-08T16:55:39+08:00"}
+{"level":"info","msg":"Adding new route: /test5","time":"2025-11-08T16:55:39+08:00"}
+{"level":"info","msg":"Adding new route: /address","time":"2025-11-08T16:55:39+08:00"}
+{"level":"info","msg":"Starting server on port 2006...","time":"2025-11-08T16:55:39+08:00"}
+{"level":"info","msg":"Access JSON files at http://localhost:2006/[filename-without-extension]","time":"2025-11-08T16:55:39+08:00"}
+{"level":"info","msg":"Server will automatically update routes when JSON files are added/removed/modified","time":"2025-11-08T16:55:39+08:00"}
+{"level":"info","msg":"The Json response route test.json was responsed success.","time":"2025-11-08T16:55:55+08:00"}
+{"level":"info","msg":"Current directory: d:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:56:39+08:00"}
+{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T16:56:39+08:00"}
+{"level":"info","msg":"File event detected: d:\\Project\\GoOfficial\\GoEasyJson\\GoEasyJson.log  WRITE","time":"2025-11-08T16:57:01+08:00"}
+{"level":"info","msg":"File event detected: d:\\Project\\GoOfficial\\GoEasyJson\\test.json  WRITE","time":"2025-11-08T16:57:22+08:00"}
+{"level":"info","msg":"File event detected: d:\\Project\\GoOfficial\\GoEasyJson\\test.json  WRITE","time":"2025-11-08T16:57:22+08:00"}
+{"level":"info","msg":"Current directory: d:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:57:22+08:00"}
+{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T16:57:22+08:00"}
+{"level":"info","msg":"Current directory: d:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:57:22+08:00"}
+{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T16:57:22+08:00"}
+{"level":"info","msg":"The Json response route test.json was responsed success.","time":"2025-11-08T16:57:35+08:00"}
+{"level":"info","msg":"Current directory: d:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:57:39+08:00"}
+{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T16:57:39+08:00"}
+{"level":"info","msg":"File event detected: d:\\Project\\GoOfficial\\GoEasyJson\\GoEasyJson.log  WRITE","time":"2025-11-08T16:58:04+08:00"}
+{"level":"info","msg":"File event detected: d:\\Project\\GoOfficial\\GoEasyJson\\GoEasyJson.log  WRITE","time":"2025-11-08T16:58:04+08:00"}
+{"level":"info","msg":"Logrus started....","time":"2025-11-08T16:59:18+08:00"}
+{"level":"info","msg":"File watcher initialized, monitoring changes in current directory","time":"2025-11-08T16:59:21+08:00"}
+{"level":"info","msg":"Current directory: d:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T16:59:21+08:00"}
+{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T16:59:21+08:00"}
+{"level":"info","msg":"Adding new route: /test5","time":"2025-11-08T16:59:21+08:00"}
+{"level":"info","msg":"Adding new route: /address","time":"2025-11-08T16:59:21+08:00"}
+{"level":"info","msg":"Adding new route: /logistics","time":"2025-11-08T16:59:21+08:00"}
+{"level":"info","msg":"Adding new route: /telephone","time":"2025-11-08T16:59:21+08:00"}
+{"level":"info","msg":"Adding new route: /test","time":"2025-11-08T16:59:21+08:00"}
+{"level":"info","msg":"Adding new route: /test2","time":"2025-11-08T16:59:21+08:00"}
+{"level":"info","msg":"Adding new route: /test3","time":"2025-11-08T16:59:21+08:00"}
+{"level":"info","msg":"Adding new route: /test4","time":"2025-11-08T16:59:21+08:00"}
+{"level":"info","msg":"Starting server on port 8888...","time":"2025-11-08T16:59:21+08:00"}
+{"level":"info","msg":"Access JSON files at http://localhost:8888/[filename-without-extension]","time":"2025-11-08T16:59:21+08:00"}
+{"level":"info","msg":"Server will automatically update routes when JSON files are added/removed/modified","time":"2025-11-08T16:59:21+08:00"}
+{"level":"info","msg":"The Json response route test.json was responsed success.","time":"2025-11-08T16:59:37+08:00"}
+{"level":"info","msg":"File event detected: d:\\Project\\GoOfficial\\GoEasyJson\\GoEasyJson.log  WRITE","time":"2025-11-08T16:59:41+08:00"}
+{"level":"info","msg":"File event detected: d:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T17:00:06+08:00"}
+{"level":"info","msg":"File event detected: d:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T17:00:06+08:00"}
+{"level":"info","msg":"File event detected: d:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T17:00:20+08:00"}
+{"level":"info","msg":"File event detected: d:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T17:00:20+08:00"}
+{"level":"info","msg":"Current directory: d:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T17:00:21+08:00"}
+{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T17:00:21+08:00"}
+{"level":"info","msg":"File event detected: d:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T17:01:13+08:00"}
+{"level":"info","msg":"File event detected: d:\\Project\\GoOfficial\\GoEasyJson\\main.go  WRITE","time":"2025-11-08T17:01:13+08:00"}
+{"level":"info","msg":"Current directory: d:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T17:01:21+08:00"}
+{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T17:01:21+08:00"}
+{"level":"info","msg":"Logrus started....","time":"2025-11-08T17:02:22+08:00"}
+{"level":"info","msg":"File watcher initialized, monitoring changes in current directory","time":"2025-11-08T17:02:25+08:00"}
+{"level":"info","msg":"Current directory: d:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T17:02:25+08:00"}
+{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T17:02:25+08:00"}
+{"level":"info","msg":"Adding new route: /test","time":"2025-11-08T17:02:25+08:00"}
+{"level":"info","msg":"Adding new route: /test2","time":"2025-11-08T17:02:25+08:00"}
+{"level":"info","msg":"Adding new route: /test3","time":"2025-11-08T17:02:25+08:00"}
+{"level":"info","msg":"Adding new route: /test4","time":"2025-11-08T17:02:25+08:00"}
+{"level":"info","msg":"Adding new route: /test5","time":"2025-11-08T17:02:25+08:00"}
+{"level":"info","msg":"Adding new route: /address","time":"2025-11-08T17:02:25+08:00"}
+{"level":"info","msg":"Adding new route: /logistics","time":"2025-11-08T17:02:25+08:00"}
+{"level":"info","msg":"Adding new route: /telephone","time":"2025-11-08T17:02:25+08:00"}
+{"level":"info","msg":"Starting server on port 8888...","time":"2025-11-08T17:02:25+08:00"}
+{"level":"info","msg":"Access JSON files at http://localhost:8888/[filename-without-extension]","time":"2025-11-08T17:02:25+08:00"}
+{"level":"info","msg":"Server will automatically update routes when JSON files are added/removed/modified","time":"2025-11-08T17:02:25+08:00"}
+{"level":"info","msg":"Logrus started....","time":"2025-11-08T17:03:33+08:00"}
+{"level":"info","msg":"File watcher initialized, monitoring changes in current directory","time":"2025-11-08T17:03:36+08:00"}
+{"level":"info","msg":"Current directory: d:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T17:03:36+08:00"}
+{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T17:03:36+08:00"}
+{"level":"info","msg":"Adding new route: /test2","time":"2025-11-08T17:03:36+08:00"}
+{"level":"info","msg":"Adding new route: /test3","time":"2025-11-08T17:03:36+08:00"}
+{"level":"info","msg":"Adding new route: /test4","time":"2025-11-08T17:03:36+08:00"}
+{"level":"info","msg":"Adding new route: /test5","time":"2025-11-08T17:03:36+08:00"}
+{"level":"info","msg":"Adding new route: /address","time":"2025-11-08T17:03:36+08:00"}
+{"level":"info","msg":"Adding new route: /logistics","time":"2025-11-08T17:03:36+08:00"}
+{"level":"info","msg":"Adding new route: /telephone","time":"2025-11-08T17:03:36+08:00"}
+{"level":"info","msg":"Adding new route: /test","time":"2025-11-08T17:03:36+08:00"}
+{"level":"info","msg":"Starting server on port 8888...","time":"2025-11-08T17:03:36+08:00"}
+{"level":"info","msg":"Access JSON files at http://localhost:8888/[filename-without-extension]","time":"2025-11-08T17:03:36+08:00"}
+{"level":"info","msg":"Server will automatically update routes when JSON files are added/removed/modified","time":"2025-11-08T17:03:36+08:00"}
+{"level":"info","msg":"Current directory: d:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-08T17:04:36+08:00"}
+{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-08T17:04:36+08:00"}

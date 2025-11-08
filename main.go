@@ -142,8 +142,8 @@ func createFileHandler(route string) http.HandlerFunc {
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusOK)
 		w.Write(content)
-		log.Printf("The Json response route %s was response success.", filename)
-		Lg.Infof("The Json response route %s was response success.", filename)
+		log.Printf("The Json response route %s was responsed success.", filename)
+		Lg.Infof("The Json response route %s was responsed success.", filename)
 	}
 }
 
@@ -165,7 +165,7 @@ func initFileWatcher() error {
 	if err != nil {
 		return err
 	}
-	Lg.Infof("File watcher initialized, monitoring changes in %s", currentDir)
+	log.Printf("File watcher initialized, monitoring changes in %s", currentDir)
 	Lg.Info("File watcher initialized, monitoring changes in current directory")
 
 	// Start file watcher event loop
@@ -192,7 +192,7 @@ func initFileWatcher() error {
 				if !ok {
 					return
 				}
-				Lg.Info("File watcher error: %v", err)
+				Lg.Infof("File watcher error: %v", err)
 			}
 		}
 	}()
@@ -201,16 +201,17 @@ func initFileWatcher() error {
 }
 
 func main() {
+	flag.Parse()
+
 	fmt.Println("---------------------------------------------------------------------------")
 	fmt.Println("GoEasyJson version 0.01, Author: Mang Zhang, Shenzhen, China")
 	fmt.Println("Source code: github.com/13692277450/goeasyjson")
 	fmt.Println("---------------------------------------------------------------------------")
 	fmt.Println("GoEasyJson has file watch function to monitor new json files automatically.")
 	fmt.Println("Just put your new Json file in the same directory as this \nprogram, and it will be served automatically.")
-	fmt.Println("Your json route will be localhost:2006/filename-without-extension")
+	fmt.Printf("Your json route will be localhost:%s/filename-without-extension.\n", port)
 	fmt.Println("---------------------------------------------------------------------------")
 
-	flag.Parse()
 	LogrusConfigInit()
 	go NewVersionCheck()
 	fmt.Println("GoEasyJson is checking new version and initiallizing, pls wait 3 seconds...")
@@ -225,7 +226,6 @@ func main() {
 		os.Exit(0)
 	}
 	if _, err := os.Stat("goeasyjson.exe.old"); os.IsNotExist(err) {
-		fmt.Printf("The old version application do not found.\n")
 	} else {
 		os.Remove("goeasyjson.exe.old")
 		fmt.Printf("The old version application was removed success.\n")
@@ -265,7 +265,6 @@ func main() {
 
 	// Start the server
 	log.Printf("Starting server on port %s...", port)
-
 	Lg.Infof("Starting server on port %s...", port)
 	Lg.Infof("Access JSON files at http://localhost:%s/[filename-without-extension]", port)
 	Lg.Info("Server will automatically update routes when JSON files are added/removed/modified")
