@@ -3,13 +3,18 @@ module goeasyjson
 go 1.24.7
 
 require (
+	github.com/brianvoe/gofakeit/v7 v7.9.0
 	github.com/charmbracelet/lipgloss v1.1.0
 	github.com/cheggaaa/pb/v3 v3.1.7
 	github.com/fsnotify/fsnotify v1.9.0
+	github.com/go-faker/faker/v4 v4.7.0
 	github.com/gorilla/mux v1.8.1
 	github.com/labstack/gommon v0.4.2
 	github.com/sirupsen/logrus v1.9.3
 )
+
+require golang.org/x/text v0.29.0 // indirect
+
 require (
 	github.com/VividCortex/ewma v1.2.0 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect

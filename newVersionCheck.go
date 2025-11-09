@@ -33,13 +33,14 @@ func NewVersionCheck() {
 			return
 		}
 		NewVersion, ok := data["version"]
-		UpgradeDetails, ok = data["details"].(string)
+		UpgradeDetails, ok := data["details"].(string)
 		if !ok {
 			log.Info("New version check: Invalid version format")
 			return
 		}
 		if NewVersion != CurrentVersion {
-			NewVersionIsAvailable = "A new version is available, pls run GoEasyJson -upgrade to update. \n" + "Details: " + UpgradeDetails
+			NewVersionIsAvailable := "A new version is available, pls run GoEasyJson -upgrade to update. \n" + "Details: " + UpgradeDetails
+			Lg.Info(NewVersionIsAvailable)
 		}
 	}
 

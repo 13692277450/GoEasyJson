@@ -1,0 +1,27 @@
+[
+    {
+    "address": "1234567890",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "country": "USA"
+
+},
+{
+    "address": "0987654321",
+    "name": "Jane Doe",
+    "email": "jane.doe@example.com",
+    "country": "France"
+},
+{
+    "address": "1122334455",
+    "name": "Alice Smith",
+    "email": "alice.smith@example.com",
+    "country": "Norway"
+},
+{
+    "address": "5544332211",
+    "name": "Bob Johnson",
+    "email": "bob.johnson@example.com",
+    "country": "UK"
+}
+]

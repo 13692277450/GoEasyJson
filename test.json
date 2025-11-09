@@ -1,30 +1,28 @@
-[
-    {
-        "name": "scanDirectory",
-        "description": "扫描目录以查找JSON文件，并根据需要更新路由。"
-    },
-    {
-        "name": "main",
-        "description": "主函数，设置服务器和定期扫描。"
-    },
-    {
-        "name": "newVersionCheck",
-        "description": "检查新版本并更新。"
-    },
-    {
-        "name": "updateRoutes",
-        "description": "根据目录中的JSON文件动态更新路由。",
-        "parameters": {
-            "type": "object",
-            "properties": {}
-        }
-    },
-    {
-        "name": "downloadUpgrade",
-        "description": "下载并安装新版本。",
-        "parameters": {
-            "type": "object",
-            "properties": {}
-        }
-    }
-]
+{
+   "worker": [
+      
+       {
+           "name": "Jerry",
+           "Grade": 32,
+           "age": 22,
+           "gender": "M",
+           "postcode": 345678,
+           "city": "New York",
+              "country": "USA",
+              "streetaddress": "sz us, hi tech park, 123456",
+
+                "email": "jerry@gmail.com",
+                "phone": "123-456-7890",
+                "department": "Sales",
+                "rich": true
+
+
+
+
+       }
+   ],
+   "workroom": {
+       "room1": "fifth floor",
+       "room2": "seventh floor"
+   }
+}

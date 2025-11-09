@@ -12,7 +12,7 @@ import (
 	"github.com/cheggaaa/pb/v3"
 )
 
-var cyan2 = lipgloss.NewStyle().Foreground(lipgloss.Color("#00FFFF"))
+var Cyan = lipgloss.NewStyle().Foreground(lipgloss.Color("#00FFFF"))
 
 func downloadFile(url, filepath string) error {
 	// HTTP GET
@@ -59,7 +59,7 @@ func DownloadUpgrade() {
 	url := "http://www.pavogroup.top/software/goeasyjson/goeasyjson.exe"
 	filepath := "./goeasyjson.exe"
 	go func() {
-		fmt.Println(cyan2.Render("Starting download upgrade from: ", url+"\n"))
+		fmt.Println(Cyan.Render("Starting download upgrade from: ", url+"\n"))
 		for i := 1; i < 15; i++ {
 			fmt.Print(".")
 			time.Sleep(500 * time.Millisecond)
