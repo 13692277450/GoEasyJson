@@ -33,16 +33,16 @@ import (
 )
 
 var (
-	router                *mux.Router
-	routes                = make(map[string]bool)
-	routesLock            sync.RWMutex
-	port                  int
-	watcher               *fsnotify.Watcher
-	genjson               string
-	out                   string
-	qty                   int
-	NewVersionIsAvailable string
+	router     *mux.Router
+	routes     = make(map[string]bool)
+	routesLock sync.RWMutex
+	port       int
+	watcher    *fsnotify.Watcher
+	genjson    string
+	out        string
+	qty        int
 )
+
 var Red = lipgloss.NewStyle().Foreground(lipgloss.Color("#b507eaff"))
 var LightGreen = lipgloss.NewStyle().Foreground(lipgloss.Color("#61f882ff"))
 var LightYellow = lipgloss.NewStyle().Foreground(lipgloss.Color("#f6f349ff"))
@@ -163,26 +163,29 @@ func createFileHandler(route string) http.HandlerFunc {
 	}
 }
 
-// Initialize file watcher and start monitoring for changes.
+// Initialize file watcher and start monitoring for JSON files only.
 func initFileWatcher() error {
 	var err error
 	watcher, err = fsnotify.NewWatcher()
 	if err != nil {
-		return err
+		return fmt.Errorf("failed to create file watcher: %v", err)
 	}
 
 	// Get current directory path
 	currentDir, err := os.Getwd()
 	if err != nil {
-		return err
+		return fmt.Errorf("failed to get current directory: %v", err)
 	}
 
+	// Add watch for current directory
 	err = watcher.Add(currentDir)
 	if err != nil {
-		return err
+		return fmt.Errorf("failed to add watch for directory %s: %v", currentDir, err)
 	}
-	log.Printf("File watcher initialized, monitoring changes in %s", currentDir)
-	Lg.Info("File watcher initialized, monitoring changes in current directory")
+
+	log.Printf("File watcher initialized, monitoring directory %s for JSON files only", currentDir)
+	Lg.Info("File watcher initialized, monitoring directory for JSON files only")
+	lastEvent := make(map[string]fsnotify.Op)
 
 	// Start file watcher event loop
 	go func() {
@@ -192,23 +195,78 @@ func initFileWatcher() error {
 				if !ok {
 					return
 				}
-				log.Printf("File event detected: %s  %s", event.Name, event.Op)
-				Lg.Infof("File event detected: %s  %s", event.Name, event.Op)
-				// Detect JSON file changes or creation/deletion of files
+
+				// Get file names and converto lowercase extension
 				ext := strings.ToLower(filepath.Ext(event.Name))
-				if ext == ".json" || event.Op&fsnotify.Create == fsnotify.Create ||
-					event.Op&fsnotify.Remove == fsnotify.Remove || event.Op&fsnotify.Rename == fsnotify.Rename {
-					// Delay the scan to avoid excessive scanning during rapid changes
-					time.AfterFunc(100*time.Millisecond, func() {
+				// Only porcess JSON files
+				if ext == ".json" {
+					switch event.Op {
+					case fsnotify.Create:
+						// Make sure it's a file and not a directory
+						if info, err := os.Stat(event.Name); err == nil {
+							if !info.IsDir() {
+								// New json file was created, add watch for it
+								err := watcher.Add(event.Name)
+								if err != nil {
+									Lg.Errorf("Failed to add watch for new JSON file %s: %v", event.Name, err)
+									log.Printf("Failed to add watch for new JSON file %s: %v", event.Name, err)
+
+								} else {
+									Lg.Infof("Added watch for new JSON file: %s", event.Name)
+									log.Printf("Added watch for new JSON file: %s", event.Name)
+									scanDirectory()
+								}
+							}
+						}
+
+					case fsnotify.Write:
+						if lastOp, exists := lastEvent[event.Name]; !exists || lastOp != event.Op {
+							lastEvent[event.Name] = event.Op
+						} else {
+							Lg.Infof("Detect changes in JSON file: %s", event.Name)
+							log.Printf("Detected changes in JSON file: %s", event.Name)
+						}
+						// delayed scan to avoid rapid consecutive changes
+						time.AfterFunc(600*time.Millisecond, func() {
+							scanDirectory()
+						})
+					case fsnotify.Remove:
+						if lastOp, exists := lastEvent[event.Name]; !exists || lastOp != event.Op {
+							lastEvent[event.Name] = event.Op
+						} else {
+							Lg.Infof("JSON file removed: %s", event.Name)
+							log.Printf("JSON file removed: %s", event.Name)
+						}
+						// json file was removed, remove watch
 						scanDirectory()
-					})
+					case fsnotify.Rename:
+						if lastOp, exists := lastEvent[event.Name]; !exists || lastOp != event.Op {
+							lastEvent[event.Name] = event.Op
+						} else {
+							Lg.Infof("JSON file renamed: %s", event.Name)
+							log.Printf("JSON file renamed: %s", event.Name)
+						}
+						scanDirectory()
+					}
+				} else if event.Op&fsnotify.Create == fsnotify.Create {
+					// Process new folder
+					if info, err := os.Stat(event.Name); err == nil {
+						if info.IsDir() {
+							// Create watch for new directory
+							err := watcher.Add(event.Name)
+							if err != nil {
+								Lg.Warnf("Failed to add watch for new directory %s: %v", event.Name, err)
+								log.Printf("Failed to add watch for new directory %s: %v", event.Name, err)
+							}
+						}
+					}
 				}
 
 			case err, ok := <-watcher.Errors:
 				if !ok {
 					return
 				}
-				Lg.Infof("File watcher error: %v", err)
+				Lg.Errorf("File watcher error: %v", err)
 			}
 		}
 	}()
@@ -238,9 +296,7 @@ func main() {
 	go NewVersionCheck()
 	fmt.Println(Cyan.Render("GoEasyJson is checking new version and initiallizing, pls wait 3 seconds..."))
 	time.Sleep(time.Second * 3)
-	SignalString := ""
-	SignalString += SignalString + NewVersionIsAvailable // check for new version
-	fmt.Println(LightYellow.Render(SignalString))
+	fmt.Println(LightYellow.Render(NewVersionIsAvailable))
 	fmt.Println("")
 	if *IsUpgrade {
 		DownloadUpgrade() // download new version
@@ -266,6 +322,12 @@ func main() {
 	// Start Scan files
 	scanDirectory()
 
+	// Version check channel
+	// versionChan := make(chan string)
+	// go func() {
+	// 	versionChan <- NewVersionCheck()
+	// }()
+
 	// Setup periodic scanning every 60 seconds as backup solution
 	ticker := time.NewTicker(60 * time.Second)
 	defer ticker.Stop()
@@ -284,10 +346,20 @@ func main() {
 	}).Methods("GET")
 
 	// Start the server
-	log.Printf("Starting server on port %s...", port)
+	log.Printf("Starting server on port %d...", port)
 	var strPort = fmt.Sprintf("Access JSON API at http://localhost:%d/filename-without-extension\n", port)
 	fmt.Println(LightYellow.Render(strPort))
 	fmt.Println("Server will automatically update routes when JSON files are added/removed/modified")
+
+	if *IsUpgrade {
+		DownloadUpgrade() // download new version
+		os.Exit(0)
+	}
+	if _, err := os.Stat("goeasyjson.exe.old"); os.IsNotExist(err) {
+	} else {
+		os.Remove("goeasyjson.exe.old")
+		fmt.Printf("The old version application was removed success.\n")
+	}
 
 	err = http.ListenAndServe(":"+strconv.Itoa(port), router)
 	if err != nil {

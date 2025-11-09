@@ -2,13 +2,16 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"time"
 
 	"github.com/labstack/gommon/log"
 )
 
-func NewVersionCheck() {
+var NewVersionIsAvailable string
+
+func NewVersionCheck() string {
 	tr := &http.Transport{
 		MaxIdleConns:          5,
 		IdleConnTimeout:       30 * time.Second,
@@ -22,7 +25,7 @@ func NewVersionCheck() {
 	resp, err := client.Get(url)
 	if err != nil {
 		log.Error("New version check Error:", err)
-		return
+		return ""
 	}
 	defer resp.Body.Close()
 	if resp.StatusCode == http.StatusOK {
@@ -30,18 +33,31 @@ func NewVersionCheck() {
 		err := json.NewDecoder(resp.Body).Decode(&data)
 		if err != nil {
 			log.Info("New version Error decoding JSON:", err)
-			return
+			return ""
 		}
-		NewVersion, ok := data["version"]
-		UpgradeDetails, ok := data["details"].(string)
+		// Extract version and details as strings
+		newVersionStr, ok := data["version"].(string)
 		if !ok {
-			log.Info("New version check: Invalid version format")
-			return
+			// try to handle numeric version fields by formatting
+			if vnum, ok2 := data["version"].(float64); ok2 {
+				newVersionStr = fmt.Sprintf("%v", vnum)
+			} else {
+				log.Info("New version check: Invalid version format")
+				return ""
+			}
 		}
-		if NewVersion != CurrentVersion {
-			NewVersionIsAvailable := "A new version is available, pls run GoEasyJson -upgrade to update. \n" + "Details: " + UpgradeDetails
+
+		upgradeDetails := ""
+		if d, ok := data["details"].(string); ok {
+			upgradeDetails = d
+		}
+
+		// If different from current version, set global message
+		if newVersionStr != CurrentVersion {
+			NewVersionIsAvailable = "A new version is available, pls run GoEasyJson -upgrade to update. \n" + "Details: " + upgradeDetails
 			Lg.Info(NewVersionIsAvailable)
 		}
 	}
+	return NewVersionIsAvailable
 
 }
