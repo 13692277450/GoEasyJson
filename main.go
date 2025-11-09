@@ -73,7 +73,7 @@ func init() {
 	flag.StringVar(&genjson, "genjson", "", "Generate test JSON data from sample file (e.g. -genjson sample.json -out test.json -qty 1000)")
 	flag.StringVar(&out, "out", "", "Output file for generated JSON data")
 	flag.IntVar(&qty, "qty", 0, "Number of records to generate")
-	flag.IntVar(&port, "port", 2006, "Server port")
+	flag.IntVar(&port, "port", 2006, "Server port (e.g. goeasyjson -port 2006)")
 
 }
 
@@ -289,7 +289,10 @@ func main() {
 	fmt.Println("GoEasyJson has file watch function to monitor new json files automatically.")
 	fmt.Println("Just put your new Json file in the same directory as this program,\nit will be served automatically.")
 	fmt.Println("")
-	fmt.Println(Red.Render("Your default JSON API is localhost:2006/filename-without-extension."))
+	fmt.Println(Red.Render("Fake data generator: goeasyjson -genjson sample.json -out test.json -qty 1000."))
+	fmt.Println(Red.Render("Customize API port: goeasyjson -port 2006."))
+	fmt.Println(Red.Render("Upgrade to new version: goeasyjson -upgrade."))
+
 	fmt.Println("---------------------------------------------------------------------------")
 
 	LogrusConfigInit()
