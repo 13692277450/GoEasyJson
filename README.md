@@ -9,7 +9,8 @@ Main function:
 4. One running file, need not any support environment.
 5. Just put your json file into the same directory. GoEasyJson will watch files and auto create dynamic Json API and handlers.
 6. You can use parameter goeasyjson -port 8888 to customize your prefer port.
-7. Free
+7. Run goeasyjson -genjson sample.json -o results.json -qty 10000, it can auto generate Json format data according to your json format.
+8. Free
 
 Auto upgrade:
 
@@ -17,7 +18,7 @@ Auto upgrade:
 
 Serve details:
 
-<img width="913" height="779" alt="image" src="https://github.com/user-attachments/assets/83747e72-4070-4425-8421-af2a319bc228" />
+<img width="1166" height="786" alt="image" src="https://github.com/user-attachments/assets/faadfda0-9ee6-4d25-a65b-4c0a666b4834" />
 
 
 Log file:
