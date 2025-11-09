@@ -12,13 +12,16 @@ Main function:
 7. Run goeasyjson -genjson sample.json -o results.json -qty 10000, it can auto generate Json format data according to your json format.
 8. Free
 
+
 Auto upgrade:
 
 <img width="1546" height="446" alt="image" src="https://github.com/user-attachments/assets/5e6eb5b6-fa41-4c50-86e9-fcba9d5b887d" />
 
+
 Serve details:
 
-<img width="1166" height="786" alt="image" src="https://github.com/user-attachments/assets/faadfda0-9ee6-4d25-a65b-4c0a666b4834" />
+<img width="1360" height="708" alt="image" src="https://github.com/user-attachments/assets/68f59371-d65f-4995-bbee-138eb2b19a82" />
+
 
 
 Log file:
