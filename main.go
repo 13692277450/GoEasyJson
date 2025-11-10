@@ -302,12 +302,17 @@ func main() {
 	fmt.Println(LightYellow.Render(NewVersionIsAvailable))
 	fmt.Println("")
 	if *IsUpgrade {
-		DownloadUpgrade() // download new version
+		DownlaodOption() // download new version
 		os.Exit(0)
 	}
 	if _, err := os.Stat("goeasyjson.exe.old"); os.IsNotExist(err) {
 	} else {
 		os.Remove("goeasyjson.exe.old")
+		fmt.Printf("The old version application was removed success.\n")
+	}
+	if _, err := os.Stat("goeasyjsonLinuxVersion.old"); os.IsNotExist(err) {
+	} else {
+		os.Remove("goeasyjsonLinuxVersion.old")
 		fmt.Printf("The old version application was removed success.\n")
 	}
 	// Initialize router
@@ -354,10 +359,6 @@ func main() {
 	fmt.Println(LightYellow.Render(strPort))
 	fmt.Println("Server will automatically update routes when JSON files are added/removed/modified")
 
-	if *IsUpgrade {
-		DownloadUpgrade() // download new version
-		os.Exit(0)
-	}
 	if _, err := os.Stat("goeasyjson.exe.old"); os.IsNotExist(err) {
 	} else {
 		os.Remove("goeasyjson.exe.old")
