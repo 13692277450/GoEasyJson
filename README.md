@@ -15,8 +15,11 @@ Main function:
 You can download binary version from below links:
 
 Windows version: http://www.pavogroup.top/software/goeasyjson/goeasyjson.exe
+
 Linux version: http://www.pavogroup.top/software/goeasyjson/goeasyjsonLinuxVersion
+
 Mac version: http://www.pavogroup.top/software/goeasyjson/goeasyjsonMacVersion
+
 
 Auto upgrade:
 
