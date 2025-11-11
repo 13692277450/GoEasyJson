@@ -6,13 +6,12 @@ import (
 	"net/http"
 	"os"
 	"os/exec"
+	"path/filepath"
 	"runtime"
 	"time"
 
 	"github.com/charmbracelet/lipgloss"
 	"github.com/cheggaaa/pb/v3"
-	"github.com/fatih/color"
-	"github.com/schollz/progressbar/v3"
 )
 
 var Cyan = lipgloss.NewStyle().Foreground(lipgloss.Color("#00FFFF"))
@@ -62,7 +61,9 @@ func downloadFile(url, filepath string) error {
 // DownloadUpgrade
 func DownloadUpgradeWindows(DownloadUrl string) {
 
-	filepathWindows := "./goeasyjson.exe"
+	//filepathWindows := "./goeasyjson.exe"
+	filepathWindows := filepath.Base(os.Args[0])
+
 	go func() {
 		fmt.Println(Cyan.Render("Starting download upgrade from: ", DownloadUrl+"\n"))
 		for i := 1; i < 15; i++ {
@@ -117,18 +118,84 @@ del "%~f0"
 
 func DownlaodOption() {
 	sysType := runtime.GOOS
-	if sysType == "windows" {
+	switch sysType {
+	case "windows":
 		DownloadUrl = "http://www.pavogroup.top/software/goeasyjson/goeasyjson.exe"
 		DownloadUpgradeWindows(DownloadUrl)
 		//DownloadWithBar(DownloadUrl)
-	} else {
+	case "linux":
 		DownloadUrl = "http://www.pavogroup.top/software/goeasyjson/goeasyjsonLinuxVersion"
 		DownloadUpgradeLinux(DownloadUrl)
+	case "darwin":
+		DownloadUrl = "http://www.pavogroup.top/software/goeasyjson/goeasyjsonMacVersion"
+		DownloadUpgradeMac(DownloadUrl)
+	default:
+		fmt.Println("Unsupported OS for upgrade.")
 	}
 }
 
+func DownloadUpgradeMac(DownloadUrl string) {
+	//filepathMac := "./goeasyjsonMacVersion"
+	filepathMac := filepath.Base(os.Args[0])
+	go func() {
+		fmt.Println(Cyan.Render("Starting download upgrade from: ", DownloadUrl+"\n"))
+		for i := 1; i < 15; i++ {
+			fmt.Print(".")
+			time.Sleep(500 * time.Millisecond)
+		}
+	}()
+
+	tempFile := filepathMac + ".tmp"
+	err := downloadFile(DownloadUrl, tempFile)
+	if err != nil {
+		fmt.Println("Download new file error.")
+		return
+	}
+
+	// Rename current executable to .old and rename the new one to current executable
+	oldFile := filepathMac + ".old"
+	os.Remove(oldFile) // Remove old backup if exists
+	if err := os.Rename(filepathMac, oldFile); err != nil {
+		// It's okay if the current file doesn't exist (first install)
+		fmt.Printf("Move to old file was failure: %v\n", err)
+	}
+
+	// Create update shell script for macOS (same behavior as Linux)
+	shContent := "#!/bin/sh\n" +
+		"sleep 2\n" +
+		"mv \"" + tempFile + "\" \"" + filepathMac + "\"\n" +
+		"chmod +x \"" + filepathMac + "\"\n" +
+		"rm -- \"$0\"\n"
+
+	shFile := "update_mac.sh"
+	if err := os.WriteFile(shFile, []byte(shContent), 0755); err != nil {
+		fmt.Println("Writing update script was failure.")
+		return
+	}
+
+	// Run the shell script and wait a moment for it to take over
+	fmt.Println("Executing update script...")
+	cmd := exec.Command("sh", shFile)
+	if err := cmd.Start(); err != nil {
+		fmt.Printf("Error executing update script: %v\n", err)
+		return
+	}
+	time.Sleep(3 * time.Second)
+
+	// Verify the new file exists
+	if _, err := os.Stat(filepathMac); os.IsNotExist(err) {
+		fmt.Printf("Error: New file %s was not created\n", filepathMac)
+		return
+	}
+
+	fmt.Println("Update completed successfully. Old version saved as " + oldFile + ", the old version will be removed automatically when application launch next time.")
+	os.Exit(0) // Exit the program after successful update
+}
+
 func DownloadUpgradeLinux(DownloadUrl string) {
-	filepathLinux := "./goeasyjsonLinuxVersion"
+	//filepathLinux := "./goeasyjsonLinuxVersion"
+	filepathLinux := filepath.Base(os.Args[0])
+
 	go func() {
 		fmt.Println(Cyan.Render("Starting download upgrade from: ", DownloadUrl+"\n"))
 		for i := 1; i < 15; i++ {
@@ -182,57 +249,4 @@ func DownloadUpgradeLinux(DownloadUrl string) {
 
 	fmt.Println("Update completed successfully. Old version saved as " + oldFile + ", the old version will be removed automatically when application launch next time.")
 	os.Exit(0) // Exit the program after successful update
-}
-
-func DownloadWithBar(url string) {
-
-	//url = "http://www.pavogroup.top/software/goeasyjson/goeasyjson.exe"
-	req, err := http.NewRequest("GET", url, nil)
-	if err != nil {
-		fmt.Printf("Failed to create request: %v\n", err)
-		return
-	}
-
-	resp, err := http.DefaultClient.Do(req)
-	if err != nil {
-		fmt.Printf("Request failed: %v\n", err)
-		return
-	}
-	if resp == nil || resp.Body == nil {
-		fmt.Println("Empty response received")
-		if resp != nil {
-			resp.Body.Close()
-		}
-		return
-	}
-	defer resp.Body.Close()
-
-	f, err := os.OpenFile("goeasyjson1.exe", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
-	if err != nil {
-		fmt.Printf("Failed to open file: %v\n", err)
-		return
-	}
-	defer f.Close()
-	//green := color.New(color.FgGreen).SprintFunc()
-	//yellow := color.New(color.FgYellow).SprintFunc()
-	cyan := color.New(color.FgCyan).SprintFunc()
-	//purple := color.New(color.FgMagenta).SprintFunc()
-	progressbar.OptionSetTheme(progressbar.Theme{
-		Saucer:        cyan("#"),
-		SaucerHead:    cyan("#"),
-		SaucerPadding: " ",
-		BarStart:      "[",
-		BarEnd:        "]",
-	})
-	progressbar.OptionSetDescription("[cyan][1/3][reset] Writing moshable file...")
-
-	bar := progressbar.DefaultBytes(
-		resp.ContentLength,
-		Cyan.Render("Downloading..."),
-	)
-
-	if _, err := io.Copy(io.MultiWriter(f, bar), resp.Body); err != nil {
-		fmt.Printf("\nDownload failed: %v\n", err)
-		return
-	}
 }

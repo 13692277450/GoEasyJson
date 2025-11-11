@@ -1719,3 +1719,23 @@
 {"level":"info","msg":"Logrus started....","time":"2025-11-10T09:13:24+08:00"}
 {"level":"info","msg":"Logrus started....","time":"2025-11-10T09:15:12+08:00"}
 {"level":"info","msg":"Logrus started....","time":"2025-11-10T12:22:08+08:00"}
+{"level":"info","msg":"Logrus started....","time":"2025-11-11T19:49:53+08:00"}
+{"level":"info","msg":"A new version is available, pls run GoEasyJson -upgrade to update. \nDetails: Add Mac version.","time":"2025-11-11T19:49:53+08:00"}
+{"level":"info","msg":"Logrus started....","time":"2025-11-11T19:55:58+08:00"}
+{"level":"info","msg":"A new version is available, pls run GoEasyJson -upgrade to update. \nDetails: Add Mac version.","time":"2025-11-11T19:55:59+08:00"}
+{"level":"info","msg":"Logrus started....","time":"2025-11-11T20:10:22+08:00"}
+{"level":"info","msg":"A new version is available, pls run GoEasyJson -upgrade to update. \nDetails: Add Mac version.","time":"2025-11-11T20:10:24+08:00"}
+{"level":"info","msg":"File watcher initialized, monitoring directory for JSON files only","time":"2025-11-11T20:10:25+08:00"}
+{"level":"info","msg":"Current directory: D:\\Project\\GoOfficial\\GoEasyJson","time":"2025-11-11T20:10:25+08:00"}
+{"level":"info","msg":"Scanning directory for JSON files...","time":"2025-11-11T20:10:25+08:00"}
+{"level":"info","msg":"Adding new route: /results","time":"2025-11-11T20:10:25+08:00"}
+{"level":"info","msg":"Adding new route: /telephone","time":"2025-11-11T20:10:25+08:00"}
+{"level":"info","msg":"Adding new route: /test","time":"2025-11-11T20:10:25+08:00"}
+{"level":"info","msg":"Adding new route: /test2","time":"2025-11-11T20:10:25+08:00"}
+{"level":"info","msg":"Adding new route: /test4","time":"2025-11-11T20:10:25+08:00"}
+{"level":"info","msg":"Adding new route: /address","time":"2025-11-11T20:10:25+08:00"}
+{"level":"info","msg":"Adding new route: /test3","time":"2025-11-11T20:10:25+08:00"}
+{"level":"info","msg":"Adding new route: /test5","time":"2025-11-11T20:10:25+08:00"}
+{"level":"info","msg":"Adding new route: /logistics","time":"2025-11-11T20:10:25+08:00"}
+{"level":"info","msg":"Logrus started....","time":"2025-11-11T20:10:39+08:00"}
+{"level":"info","msg":"A new version is available, pls run GoEasyJson -upgrade to update. \nDetails: Add Mac version.","time":"2025-11-11T20:10:39+08:00"}

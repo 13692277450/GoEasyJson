@@ -1,7 +1,7 @@
 package main
 
 /*
-Version: 0.02
+Version: 0.03
 Author: Mang Zhang, Shenzhen China
 Release Date: 2025-11-08
 Project Name: GoEasyJson
@@ -62,7 +62,7 @@ var excludedExtensions = map[string]bool{
 }
 
 var (
-	CurrentVersion = "0.0.2"
+	CurrentVersion = "0.0.3"
 	IsUpgrade      = flag.Bool("upgrade", false, "Run with -upgrade to update to new version of GoEasyJson")
 	// GenJson        = flag.String("genjson", "", "Generate test JSON data from sample file (e.g. -genjson sample.json -out test.json -qty 1000)")
 	// OutputFile     = flag.String("out", "", "Output file for generated JSON data")
@@ -283,7 +283,7 @@ func main() {
 	}
 
 	fmt.Println("---------------------------------------------------------------------------")
-	fmt.Println(LightGreen.Render("GoEasyJson version 0.0.2(11/09/2025), Author: Mang Zhang, Shenzhen, China"))
+	fmt.Println(LightGreen.Render("GoEasyJson version 0.0.3(11/11/2025), Author: Mang Zhang, Shenzhen, China"))
 	fmt.Println(LightGreen.Render("Source code: github.com/13692277450/goeasyjson, HomePage: www.pavogroup.top"))
 	fmt.Println("---------------------------------------------------------------------------")
 	fmt.Println("GoEasyJson has file watch function to monitor new json files automatically.")
@@ -313,6 +313,11 @@ func main() {
 	if _, err := os.Stat("goeasyjsonLinuxVersion.old"); os.IsNotExist(err) {
 	} else {
 		os.Remove("goeasyjsonLinuxVersion.old")
+		fmt.Printf("The old version application was removed success.\n")
+	}
+	if _, err := os.Stat("goeasyjsonLinuxVersion.old"); os.IsNotExist(err) {
+	} else {
+		os.Remove("goeasyjsonMacVersion.old")
 		fmt.Printf("The old version application was removed success.\n")
 	}
 	// Initialize router
