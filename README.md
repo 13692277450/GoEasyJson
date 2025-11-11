@@ -12,6 +12,11 @@ Main function:
 7. Run goeasyjson -genjson sample.json -o results.json -qty 10000, it can auto generate Json format data according to your json format.
 8. Free
 
+You can download binary version from below links:
+
+Windows version: http://www.pavogroup.top/software/goeasyjson/goeasyjson.exe
+Linux version: http://www.pavogroup.top/software/goeasyjson/goeasyjsonLinuxVersion
+Mac version: http://www.pavogroup.top/software/goeasyjson/goeasyjsonMacVersion
 
 Auto upgrade:
 
