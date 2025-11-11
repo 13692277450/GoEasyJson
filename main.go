@@ -1,7 +1,7 @@
 package main
 
 /*
-Version: 0.03
+Version: 0.0.3
 Author: Mang Zhang, Shenzhen China
 Release Date: 2025-11-08
 Project Name: GoEasyJson
