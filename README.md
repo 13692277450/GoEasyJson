@@ -3,13 +3,13 @@ A fast Json server created by Golang (Excellent program lanaguage)
 
 Main function:
 
-1. Cross platform, Windows and Linux version.
-2. Add logrus to log each steps and json response results.
+1. Cross platform, Windows and Linux and MacOS version.
+2. With logrus to record each steps and log json response results.
 3. Auto upgrade to new version.
-4. One running file, need not any support environment.
+4. One running file, no any support environment required.
 5. Just put your json file into the same directory. GoEasyJson will watch files and auto create dynamic Json API and handlers.
 6. You can use parameter goeasyjson -port 8888 to customize your prefer port.
-7. Run goeasyjson -genjson sample.json -o results.json -qty 10000, it can auto generate Json format data according to your json format.
+7. Run goeasyjson -genjson sample.json -o results.json -qty 10000, it can auto generate Json format data file according to your json format.
 8. Free
 
 You can download binary version from below links:
