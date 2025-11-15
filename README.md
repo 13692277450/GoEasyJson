@@ -1,7 +1,7 @@
 # GoEasyJson
 A fast Json server created by Golang (Excellent program lanaguage)
 
-# ( If you like this project, pls don't forget click "STAR" to encourage me !)
+### ( If you like this project, pls don't forget click "STAR" to encourage me !)
 
 Main function:
 
