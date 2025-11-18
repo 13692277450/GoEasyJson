@@ -23,7 +23,9 @@ import (
 	"math/rand"
 	"net/http"
 	"os"
+	"os/exec"
 	"path/filepath"
+	"runtime"
 	"strconv"
 	"strings"
 	"sync"
@@ -397,7 +399,7 @@ func main() {
 	// }()
 
 	// Setup periodic scanning every 60 seconds as backup solution
-	ticker := time.NewTicker(60 * time.Second)
+	ticker := time.NewTicker(180 * time.Second)
 	defer ticker.Stop()
 
 	go func() {
@@ -472,22 +474,7 @@ func main() {
 			}
 		}
 	}()
-
-	// 修改StringEvent更新的地方，添加广播
-	originalStringEvent := StringEvent
-	StringEvent = ""
-	for _, event := range strings.Split(originalStringEvent, "\n") {
-		if event != "" {
-			// 确保每个URL单独一行
-			if !strings.HasSuffix(event, "\n") {
-				event += "\n"
-			}
-			StringEvent += event
-			Broadcast <- StringEvent
-		}
-	}
-
-	// 使用函数更新事件
+	// 使用函数更新事件（已包含排序逻辑）
 	UpdateStringEvent("")
 
 	// Start the server
@@ -499,7 +486,7 @@ func main() {
 	// 设置Gin为release模式，禁用调试输出
 	gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()
-	r.LoadHTMLGlob("templates/**/*")
+	r.LoadHTMLGlob("templates/*")
 	r.GET("/", func(c *gin.Context) {
 		// 收集所有端点URL
 		var endpoints []string
@@ -519,12 +506,35 @@ func main() {
 		r.ServeHTTP(w, req)
 	})
 
-	// 恢复原来的http.ListenAndServe调用，传递router参数
 	err = http.ListenAndServe(":"+strconv.Itoa(port), router)
 	if err != nil {
 		log.Printf("Server error: %v", err)
 	}
+	var urlString = "http://localhost:" + strconv.Itoa(port)
 
+	err = openBrowser(urlString)
+	if err != nil {
+		panic(err)
+	}
+
+}
+
+func openBrowser(url string) error {
+	var cmd string
+	var args []string
+
+	switch runtime.GOOS {
+	case "windows":
+		cmd = "cmd"
+		args = []string{"/c", "start"}
+	case "darwin":
+		cmd = "open"
+	default: // Linux 和其他 Unix 系统
+		cmd = "xdg-open"
+	}
+
+	args = append(args, url)
+	return exec.Command(cmd, args...).Start()
 }
 
 func generateTestData(sampleFile, outputFile string, quantity int) {
