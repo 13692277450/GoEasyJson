@@ -1,0 +1,12 @@
+{
+  "Grade": 42.876,
+  "age": 25,
+  "number": 6667.5678,
+  "email": "john.doe@example.com",
+  "tufei": "uu23349.55",
+  "mixed_data": {
+    "count": 100,
+    "temperature": 25.5,
+    "scores": [85, 92.5, 78, 95.0]
+  }
+}

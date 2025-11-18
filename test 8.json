@@ -1,0 +1,22 @@
+{
+  "worker": [
+    {
+      "name": "Jerry",
+      "Grade": 32,
+      "age": 22,
+      "gender": "M",
+      "postcode": 345678,
+      "city": "New York",
+      "country": "USA",
+      "streetaddress": "sz us, hi tech park, 123456",
+      "email": "jerry@gmail.com",
+      "phone": "123-456-7890",
+      "department": "Sales",
+      "rich": true
+    }
+  ],
+  "workroom": {
+    "room1": "fifth floor",
+    "room2": "seventh floor"
+  }
+}

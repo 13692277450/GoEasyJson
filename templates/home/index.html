@@ -1,0 +1,86 @@
+{{define "index.html"}}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GoEasyJson</title>
+    <link rel="stylesheet" href="/static/homepage.css" />
+    <style>
+        /* body {
+    background-color: #a776f6; 
+  } */
+    </style>
+</head>
+
+<body>
+    <h1 class="neon-purple" style="text-align: center; color: aqua;">GoEasyJson HomePage</h1>
+    <div class="log-bg-transparent grid">
+        <p>
+        </p>
+
+    </div>
+    <button class="custom-btn btn" onclick="alert('Function develop in progress! pls wait version 0.0.5.')"><span>REFRESH DATA</span></button>
+    <p>
+
+    </p>
+    <div class="card">
+        <div class="card__content">
+            <h4 style="color: aquamarine; font-weight: normal;">Available Routes:</h4>
+            <ul id="endpoints-list">
+                {{range .Endpoints}}
+                <li><a href="{{.}}" style="color: #00ffff;">{{.}}</a></li>
+                {{end}}
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // 创建WebSocket连接
+        const socket = new WebSocket("ws://" + window.location.host + "/ws");
+
+        // 连接建立时
+        socket.onopen = function(e) {
+            console.log("WebSocket连接已建立");
+        };
+
+        // 接收消息时
+        socket.onmessage = function(event) {
+            try {
+                const data = JSON.parse(event.data);
+                // 清空并重新填充列表
+                const list = document.getElementById("endpoints-list");
+                list.innerHTML = "";
+                data.endpoints.forEach(url => {
+                    const li = document.createElement("li");
+                    const a = document.createElement("a");
+                    a.href = url;
+                    a.style.color = "#00ffff";
+                    a.textContent = url;
+                    li.appendChild(a);
+                    list.appendChild(li);
+                });
+            } catch (e) {
+                console.error("Error parsing JSON:", e);
+            }
+        };
+
+        // 连接关闭时
+        socket.onclose = function(event) {
+            if (event.wasClean) {
+                console.log(`连接已关闭，代码=${event.code} 原因=${event.reason}`);
+            } else {
+                console.log('连接意外断开');
+            }
+        };
+
+        // 发生错误时
+        socket.onerror = function(error) {
+            console.log(`WebSocket错误: ${error.message}`);
+        };
+    </script>
+</body>
+
+</html>
+{{end}}

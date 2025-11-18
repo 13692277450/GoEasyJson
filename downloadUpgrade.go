@@ -112,7 +112,7 @@ del "%~f0"
 		return
 	}
 
-	fmt.Println("Update completed successfully. Old version saved as " + oldFile + ", the old version will be removed automatically when application launch next time.")
+	fmt.Println("Update completed successfully. Old version saved as " + oldFile + " which will be removed automatically when application launch next time.")
 	os.Exit(0) // Exit the program after successful update
 }
 
@@ -188,7 +188,7 @@ func DownloadUpgradeMac(DownloadUrl string) {
 		return
 	}
 
-	fmt.Println("Update completed successfully. Old version saved as " + oldFile + ", the old version will be removed automatically when application launch next time.")
+	fmt.Println("Update completed successfully. Old version saved as " + oldFile + " which will be removed automatically when application launch next time.")
 	os.Exit(0) // Exit the program after successful update
 }
 
@@ -247,6 +247,6 @@ func DownloadUpgradeLinux(DownloadUrl string) {
 		return
 	}
 
-	fmt.Println("Update completed successfully. Old version saved as " + oldFile + ", the old version will be removed automatically when application launch next time.")
+	fmt.Println("Update completed successfully. Old version saved as " + oldFile + " which will be removed automatically when application launch next time.")
 	os.Exit(0) // Exit the program after successful update
 }

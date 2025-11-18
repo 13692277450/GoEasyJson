@@ -1,0 +1,172 @@
+[
+  {
+    "Grade": 29.354,
+    "age": 28,
+    "email": "raoulconsidine@hilpert.net",
+    "mixed_data": {
+      "count": 72,
+      "scores": [
+        59,
+        97.6,
+        52,
+        27
+      ],
+      "temperature": 35.5
+    },
+    "number": 2.3881,
+    "tufei": "hence"
+  },
+  {
+    "Grade": 73.289,
+    "age": 43,
+    "email": "mikelblock@larkin.io",
+    "mixed_data": {
+      "count": 33,
+      "scores": [
+        27,
+        50.7,
+        3,
+        90
+      ],
+      "temperature": 1.9
+    },
+    "number": 85.4468,
+    "tufei": "each"
+  },
+  {
+    "Grade": 59.557,
+    "age": 13,
+    "email": "madysonstamm@witting.com",
+    "mixed_data": {
+      "count": 60,
+      "scores": [
+        96,
+        55.1,
+        84,
+        16
+      ],
+      "temperature": 34.2
+    },
+    "number": 57.3144,
+    "tufei": "would"
+  },
+  {
+    "Grade": 96.311,
+    "age": 50,
+    "email": "nathanielbrekke@lind.biz",
+    "mixed_data": {
+      "count": 25,
+      "scores": [
+        21,
+        75.9,
+        44,
+        64
+      ],
+      "temperature": 67.7
+    },
+    "number": 89.7727,
+    "tufei": "batch"
+  },
+  {
+    "Grade": 30.473,
+    "age": 85,
+    "email": "chancelangworth@hermiston.name",
+    "mixed_data": {
+      "count": 81,
+      "scores": [
+        3,
+        37.3,
+        45,
+        50
+      ],
+      "temperature": 98.1
+    },
+    "number": 28.1499,
+    "tufei": "lastly"
+  },
+  {
+    "Grade": 84,
+    "age": 7,
+    "email": "elianestoltenberg@bartell.io",
+    "mixed_data": {
+      "count": 52,
+      "scores": [
+        33,
+        47.1,
+        81,
+        40
+      ],
+      "temperature": 35.7
+    },
+    "number": 58.3601,
+    "tufei": "where"
+  },
+  {
+    "Grade": 5.643,
+    "age": 98,
+    "email": "veronicahaag@nitzsche.info",
+    "mixed_data": {
+      "count": 39,
+      "scores": [
+        53,
+        12.1,
+        51,
+        9
+      ],
+      "temperature": 87.5
+    },
+    "number": 10.5595,
+    "tufei": "throughout"
+  },
+  {
+    "Grade": 55.423,
+    "age": 92,
+    "email": "frankmueller@jacobs.net",
+    "mixed_data": {
+      "count": 99,
+      "scores": [
+        64,
+        81.1,
+        47,
+        32
+      ],
+      "temperature": 90.6
+    },
+    "number": 9.5453,
+    "tufei": "each"
+  },
+  {
+    "Grade": 60.536,
+    "age": 92,
+    "email": "aftonmorissette@wyman.io",
+    "mixed_data": {
+      "count": 72,
+      "scores": [
+        62,
+        75.3,
+        69,
+        60
+      ],
+      "temperature": 27.9
+    },
+    "number": 13.6925,
+    "tufei": "which"
+  },
+  {
+    "Grade": 88.399,
+    "age": 1,
+    "email": "kenyattabauch@lakin.net",
+    "mixed_data": {
+      "count": 37,
+      "scores": [
+        53,
+        36.8,
+        65,
+        83
+      ],
+      "temperature": 34.3
+    },
+    "number": 88.2618,
+    "tufei": "as"
+  }
+]

@@ -37,7 +37,7 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-//go:embed static/* templates/*
+//go:embed static/*
 var staticFiles embed.FS
 var StringEvent string = ""
 
@@ -99,29 +99,15 @@ func init() {
 // Declare Broadcast channel for event updates (moved earlier)
 var Broadcast = make(chan string) // 广播通道
 
-// 收集所有端点URL
 var UpdateStringEvent = func(newEvent string) {
-	var endpoints []string
-	routesLock.RLock()
 	for route := range routes {
-		endpoints = append(endpoints, "http://localhost:"+strconv.Itoa(port)+route)
+		var strRoute = strings.Split(route, " ")
+		//StringEvent += "\n" + "http://localhost" + strRoute[0] + "\n"
+		for i := 0; i < len(strRoute); i++ {
+			StringEvent += "http://localhost" + strRoute[i] + "\n"
+		}
+		Broadcast <- StringEvent
 	}
-	routesLock.RUnlock()
-
-	// 构建JSON响应
-	response := map[string][]string{
-		"endpoints": endpoints,
-	}
-
-	// 将JSON序列化后发送
-	jsonData, err := json.Marshal(response)
-	if err != nil {
-		log.Printf("Error marshaling JSON: %v", err)
-		return
-	}
-
-	// 发送结构化数据
-	Broadcast <- string(jsonData)
 }
 
 // Scan files and update routes based on JSON files in the current directory.
@@ -478,11 +464,7 @@ func main() {
 	StringEvent = ""
 	for _, event := range strings.Split(originalStringEvent, "\n") {
 		if event != "" {
-			// 确保每个URL单独一行
-			if !strings.HasSuffix(event, "\n") {
-				event += "\n"
-			}
-			StringEvent += event
+			StringEvent += event + "\n"
 			Broadcast <- StringEvent
 		}
 	}
@@ -501,22 +483,12 @@ func main() {
 	r := gin.Default()
 	r.LoadHTMLGlob("templates/**/*")
 	r.GET("/", func(c *gin.Context) {
-		// 收集所有端点URL
-		var endpoints []string
-		routesLock.RLock()
-		for route := range routes {
-			endpoints = append(endpoints, "http://localhost:"+strconv.Itoa(port)+route)
-		}
-		routesLock.RUnlock()
-
-		// 传递端点列表到模板
-		c.HTML(200, "index.html", gin.H{
-			"Endpoints": endpoints,
-		})
+		c.HTML(200, "index.html", nil)
 	})
 	// 将Gin的引擎作为根路径的处理函数添加到mux的router中
 	router.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
 		r.ServeHTTP(w, req)
+		w.Write([]byte(StringEvent))
 	})
 
 	// 恢复原来的http.ListenAndServe调用，传递router参数
