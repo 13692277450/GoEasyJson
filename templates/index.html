@@ -51,7 +51,7 @@
                 const data = JSON.parse(event.data);
                 // 清空并重新填充列表
                 const list = document.getElementById("endpoints-list");
-                data.sort((a, b) => a.textContent - b.textContent);
+                // data.sort((a, b) => a.textContent - b.textContent);
                 list.innerHTML = "";
                 data.endpoints.forEach(url => {
                     const li = document.createElement("li");

@@ -512,6 +512,10 @@ func main() {
 	}
 	var urlString = "http://localhost:" + strconv.Itoa(port)
 
+	// err = browser.OpenURL(urlString)
+	// if err != nil {
+	// 	panic(err)
+	// }
 	err = openBrowser(urlString)
 	if err != nil {
 		panic(err)
