@@ -1,5 +1,5 @@
 # GoEasyJson
-A fast Json server created by Golang (Excellent program lanaguage)
+A fast Json server created by Golang, the newest ver0.0.5 (Excellent program lanaguage)
 
 
 Main function:
@@ -20,6 +20,11 @@ Windows version: http://www.pavogroup.top/software/goeasyjson/goeasyjson.exe
 Linux version: http://www.pavogroup.top/software/goeasyjson/goeasyjsonLinuxVersion
 
 Mac version: http://www.pavogroup.top/software/goeasyjson/goeasyjsonMacVersion
+
+Web UI:
+
+<img width="2531" height="1599" alt="image" src="https://github.com/user-attachments/assets/28ab433a-b0b6-415b-8666-4cf53360bb3a" />
+
 
 
 Auto upgrade:
