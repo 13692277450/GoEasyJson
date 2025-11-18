@@ -1,5 +1,5 @@
 # GoEasyJson
-A fast Json server created by Golang, the newest ver0.0.5 (Excellent program lanaguage)
+A fast Json server created by Golang, the newest ver0.0.4 (Excellent program lanaguage)
 
 
 Main function:
