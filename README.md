@@ -26,7 +26,7 @@ Mac version: http://www.pavogroup.top/software/goeasyjson/goeasyjsonMacVersion
 
 Web UI:
 
-<img width="2531" height="1599" alt="image" src="https://github.com/user-attachments/assets/28ab433a-b0b6-415b-8666-4cf53360bb3a" />
+<img width="1799" height="1415" alt="image" src="https://github.com/user-attachments/assets/bb2160cf-bb0c-413c-8d67-53f3977c319f" />
 
 
 
